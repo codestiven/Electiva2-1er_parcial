@@ -3,7 +3,7 @@ name: Deploy to Surge
 on:
   push:
     branches:
-      - main  # Cambia esto por el nombre de tu rama principal si es diferente
+      - main
 
 jobs:
   deploy:
@@ -17,5 +17,6 @@ jobs:
         run: npm install --global surge
 
       - name: Deploy to Surge
-        run: surge --project ./ --domain parcialSTIVEN.surge.sh
+        run: surge --project ./ --domain parcialSTIVEN.surge.sh --token 24e1da3dd4644955b66e10433ccfdd13
+
 
